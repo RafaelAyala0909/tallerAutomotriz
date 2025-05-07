@@ -17,6 +17,10 @@ const servicioRoutes = require('./routes/servicioRoutes');
 const solicitudHerramientaRoutes = require('./routes/solicitudHerramientaRoutes');
 const permisoRoutes = require('./routes/permiso.routes');
 const rolRoutes = require('./routes/rol.routes');
+const tipoRespuestaEncuestaRoutes = require('./routes/tipoRespuestaEncuestaRoutes');
+const preguntaEncuestaRoutes = require('./routes/preguntaEncuestaRoutes');
+const encuestaSatisfaccionRoutes = require('./routes/encuestaSatisfaccionRoutes');
+const detalleEncuestaRoutes = require('./routes/detalleEncuestaRoutes');
 
 const app = express();
 
@@ -51,6 +55,10 @@ app.use('/api/servicios', servicioRoutes);
 app.use('/api/solicitud-herramienta', solicitudHerramientaRoutes);
 app.use('/api/permisos', permisoRoutes);
 app.use('/api/roles', rolRoutes);
+app.use('/api/tipoRespuestaEncuesta', tipoRespuestaEncuestaRoutes);
+app.use('/api/preguntaEncuestaRoutes', preguntaEncuestaRoutes);
+app.use('/api/encuestaSatisfaccionRoutes', encuestaSatisfaccionRoutes);
+app.use('/api/detalleEncuestaRoutes', detalleEncuestaRoutes);
 
 
 app.use('/api/auth', require('./routes/authRoutes'));
